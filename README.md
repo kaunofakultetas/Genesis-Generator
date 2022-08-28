@@ -1,4 +1,6 @@
-## Read First
+# Genesis Generator
+A python script for creating the parameters required for a unique genesis block. SHA256/scrypt/X11/X13/X15.
+## Please Read First
 I struggled using this program for about a week due to the poor "writeups". Many have cloned this but never added anything to it, and seeing how the original creator has not updated it in years, I wanted to do my best to help as many people as possible. The original "Tutorial" gives little information on how to use the program to generate your own merkle root, genesis block, etc and more just how to replicate other chains information. I have modified it to make it easier for the average person to understand.
 
 Something not mentioned anywhere except in the code, is that there are defaults set, so if an item is left blank, the code will default to: 
@@ -38,8 +40,6 @@ which will output a secure 32-bit private key, which can be used to generate a p
 
 You must define "COIN" with two commands, ```COIN=examplecoin``` and ```export COIN```
 
-# GenesisH0
-A python script for creating the parameters required for a unique genesis block. SHA256/scrypt/X11/X13/X15.
 
 ### Dependencies
     sudo pip install scrypt construct==2.5.2
