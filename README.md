@@ -10,7 +10,7 @@ I struggled using this program for about a week due to the poor "writeups". Many
 sudo apt install git
 ```
 
-To create geneses based on X11 algorithm you will also need to install the [xcoin-hash](https://github.com/lhartikk/xcoin-hash) module. 
+To create geneses based on X11 algorithm you will also need to install the [xCoin-Hash](https://github.com/chrisbagsrocks/xcoin-hash) module. 
 For X13 you will need the [x13_hash](https://github.com/sherlockcoin/X13-PythonHash) module and for X15 the [x15_hash](https://github.com/minings/x15_hash) module.
 
 <details><summary>Understanding Code</summary>
