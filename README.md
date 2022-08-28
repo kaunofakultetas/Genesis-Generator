@@ -27,14 +27,16 @@ This is the last value in your src/chainparams.cpp file looking at the CreateGen
 ```
 All except bits (-b) include a default in code but the bits will default to 0x1e0ffff0 which is the lowest difficulty for the genesis block
 
-## Before we Begin
+## 1. Generate a Private and Public Key
 You will need a few things, first you need to generate a Private key and use that to generate a Public key. You can use many programs to do this, just make sure you are not using an online generator. That may put your project at risk if they log the private keys. Use something local, you can run the command: 
 ```
 openssl rand -hex 32 
 ``` 
 which will output a secure 32-bit private key, which can be used to generate a public key with: 
 
-[blockchain-dev-tools](https://github.com/JBaczuk/blockchain-dev-tools)
+[blockchain-dev-tools](https://github.com/JBaczuk/blockchain-dev-tools) with command ```./pubkey.py -u YOUR PRIVATE KEY```
+
+You must define "COIN" with two commands, ```COIN=examplecoin``` and ```export COIN```
 
 # GenesisH0
 A python script for creating the parameters required for a unique genesis block. SHA256/scrypt/X11/X13/X15.
