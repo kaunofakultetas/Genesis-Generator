@@ -54,6 +54,11 @@ which will output a secure 32-bit private key, which can be used to generate a p
 [blockchain-dev-tools](https://github.com/JBaczuk/blockchain-dev-tools) with command ```./pubkey.py -u YOUR PRIVATE KEY```
 
 You must define "COIN" with two commands, ```COIN=examplecoin``` and ```export COIN```
+    
+## 2. Download Repo and Prepare Command
+```
+git clone https://github.com/chrisbagsrocks/Genesis-Generator.git && cd Genesis-Generator
+```
 
 </p>
 </details>
