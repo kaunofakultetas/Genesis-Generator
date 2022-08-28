@@ -3,6 +3,15 @@ A python script for creating the parameters required for a unique genesis block.
 ## Please Read First
 I struggled using this program for about a week due to the poor "writeups". Many have cloned this but never added anything to it, and seeing how the original creator has not updated it in years, I wanted to do my best to help as many people as possible. The original "Tutorial" gives little information on how to use the program to generate your own merkle root, genesis block, etc and more just how to replicate other chains information. I have modified it to make it easier for the average person to understand.
 
+### Dependencies
+    sudo pip install scrypt construct==2.5.2
+
+To create geneses based on X11 algorithm you will also need to install the [xcoin-hash](https://github.com/lhartikk/xcoin-hash) module. 
+For X13 you will need the [x13_hash](https://github.com/sherlockcoin/X13-PythonHash) module and for X15 the [x15_hash](https://github.com/minings/x15_hash) module.
+
+<details><summary>Understanding Code</summary>
+<p>
+    
 Something not mentioned anywhere except in the code, is that there are defaults set, so if an item is left blank, the code will default to: 
 
 The message in your genesis block, can be changed to anything. Many coins use a news article that was influential during that time.
@@ -29,6 +38,12 @@ This is the last value in your src/chainparams.cpp file looking at the CreateGen
 ```
 All except bits (-b) include a default in code but the bits will default to 0x1e0ffff0 which is the lowest difficulty for the genesis block
 
+</p>
+</details>
+
+<details><summary>Steps</summary>
+<p>
+    
 ## 1. Generate a Private and Public Key
 You will need a few things, first you need to generate a Private key and use that to generate a Public key. You can use many programs to do this, just make sure you are not using an online generator. That may put your project at risk if they log the private keys. Use something local, you can run the command: 
 ```
@@ -40,12 +55,11 @@ which will output a secure 32-bit private key, which can be used to generate a p
 
 You must define "COIN" with two commands, ```COIN=examplecoin``` and ```export COIN```
 
+</p>
+</details>
 
-### Dependencies
-    sudo pip install scrypt construct==2.5.2
-
-To create geneses based on X11 algorithm you will also need to install the [xcoin-hash](https://github.com/lhartikk/xcoin-hash) module. 
-For X13 you will need the [x13_hash](https://github.com/sherlockcoin/X13-PythonHash) module and for X15 the [x15_hash](https://github.com/minings/x15_hash) module.
+<details><summary>Examples</summary>
+<p>
     
 ### Examples
 Create the original genesis hash found in Bitcoin
@@ -91,6 +105,9 @@ EXAMPLE FILLED
 ```    
 python genesis.py -a scrypt -z “NY Times 01/Jan/2022 Stock Market Blah Blah Blah” -p 04c8da8cca440aad3dfe2bc8a30fd966df9bbcbda3c4da502aafc56ab089e1ddaa8bf08be60b834212cbbe2b9ddc4d7858798bc5a2c9a1cb494cfa31123962bc14 -t 1661722736 -b 0x207fffff
 ```
+</p>
+</details>
+
 ### Options
     Usage: genesis.py [options]
     
