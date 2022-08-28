@@ -5,6 +5,10 @@ I struggled using this program for about a week due to the poor "writeups". Many
 
 ### Dependencies
     sudo pip install scrypt construct==2.5.2
+    
+```
+sudo apt install git
+```
 
 To create geneses based on X11 algorithm you will also need to install the [xcoin-hash](https://github.com/lhartikk/xcoin-hash) module. 
 For X13 you will need the [x13_hash](https://github.com/sherlockcoin/X13-PythonHash) module and for X15 the [x15_hash](https://github.com/minings/x15_hash) module.
@@ -56,9 +60,21 @@ which will output a secure 32-bit private key, which can be used to generate a p
 You must define "COIN" with two commands, ```COIN=examplecoin``` and ```export COIN```
     
 ## 2. Download Repo and Prepare Command
+On your Desktop,
 ```
 git clone https://github.com/chrisbagsrocks/Genesis-Generator.git && cd Genesis-Generator
 ```
+Now that we are in the directory, we need to prepare the command to find our parameters. An important thing to note is the difference in ```"``` vs ```“```. Very similar parenthesis, but ```“``` causes errors and ```"``` will allow you to put your full pszTimestamp.
+
+At the bottom of the Examples tab, it includes 2 examples on what it SHOULD look like. Before starting you will need to know:
+	
+Algorithm (-a) - [SHA256|scrypt|X11|X13|X15]
+	
+pszTimestamp(-z) - Piece of text that is used in Genesis Block
+	
+pubkey (-p) Generated in Step 1, should be 130 characters long.
+	
+time (-t) Epoch Time can be calculated with command ```date +%s``` or [Epoch Converter](https://www.epochconverter.com/)
 
 </p>
 </details>
