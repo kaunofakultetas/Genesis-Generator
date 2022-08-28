@@ -70,12 +70,24 @@ At the bottom of the Examples tab, it includes 2 examples on what it SHOULD look
 	
 Algorithm (-a) - [SHA256|scrypt|X11|X13|X15]
 	
-pszTimestamp(-z) - Piece of text that is used in Genesis Block
+pszTimestamp (-z) - Piece of text that is used in Genesis Block
 	
 pubkey (-p) Generated in Step 1, should be 130 characters long.
 	
 time (-t) Epoch Time can be calculated with command ```date +%s``` or [Epoch Converter](https://www.epochconverter.com/)
 
+### Optional
+	
+If you were to look at Bitcoins chainparams.cpp, you will see a line that says: 
+
+```genesis = CreateGenesisBlock(1231006505, 2083236893, 0x1d00ffff, 1, 50 * COIN);```
+	
+nonce (-n) - By default is 0 in equation but will output a different number. Equivalent to ```2083236893``` in Bitcoin File.
+	
+value (-v) - By default is 5000000000. Calculated by multiplying "Coin Value" by 100000000. Equivalent to ```50``` in Bitcoin File.
+	
+bits (-b) - By default is 1. This is the genesis blocks mining difficulty. Equivalent to ```0x1d00ffff``` in Bitcoin File.
+	
 </p>
 </details>
 
