@@ -132,11 +132,11 @@ Create the original genesis hash found in HiroCoin (requires [xcoin-hash](https:
 
 EXAMPLE BLANK
 ```    
-python genesis.py -a ALGO -z “ARTICLE OR PHRASE” -p PUBKEY -t EPOCH TIME -b DIFFICULTY (-b optional, used for regtest primarily)
+python genesis.py -a ALGO -z "ARTICLE OR PHRASE" -p PUBKEY -t EPOCH TIME -b DIFFICULTY (-b optional, used for regtest primarily)
 ```
 EXAMPLE FILLED
 ```    
-python genesis.py -a scrypt -z “NY Times 01/Jan/2022 Stock Market Blah Blah Blah” -p 04c8da8cca440aad3dfe2bc8a30fd966df9bbcbda3c4da502aafc56ab089e1ddaa8bf08be60b834212cbbe2b9ddc4d7858798bc5a2c9a1cb494cfa31123962bc14 -t 1661722736 -b 0x207fffff
+python genesis.py -a scrypt -z "NY Times 01/Jan/2022 Stock Market Blah Blah Blah" -p 04c8da8cca440aad3dfe2bc8a30fd966df9bbcbda3c4da502aafc56ab089e1ddaa8bf08be60b834212cbbe2b9ddc4d7858798bc5a2c9a1cb494cfa31123962bc14 -t 1661722736 -b 0x207fffff
 ```
 </p>
 </details>
